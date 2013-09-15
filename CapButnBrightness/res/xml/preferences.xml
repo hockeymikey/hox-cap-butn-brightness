@@ -14,4 +14,12 @@
             android:targetPackage="org.sleepydragon.capbutnbrightness"
             android:targetClass="org.sleepydragon.capbutnbrightness.debug.DebugActivity" />
     </PreferenceScreen>
+    <PreferenceScreen
+        android:title="@string/pref_levels_title"
+        android:summary="@string/pref_levels_summary">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="org.sleepydragon.capbutnbrightness"
+            android:targetClass="org.sleepydragon.capbutnbrightness.LevelsActivity" />
+    </PreferenceScreen>
 </PreferenceScreen>

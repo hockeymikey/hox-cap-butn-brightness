@@ -28,6 +28,7 @@
         <activity android:name="org.sleepydragon.capbutnbrightness.debug.DebugActivity" />
         <activity android:name="org.sleepydragon.capbutnbrightness.SettingsActivity" />
         <activity android:name="org.sleepydragon.capbutnbrightness.CreditsActivity" />
+        <activity android:name="org.sleepydragon.capbutnbrightness.LevelsActivity" />
 
         <receiver android:name="org.sleepydragon.capbutnbrightness.SetCapButtonBrightnessBroadcastReceiver">
             <intent-filter>
