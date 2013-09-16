@@ -8,7 +8,7 @@
 
 package org.sleepydragon.capbutnbrightness.clib;
 
-public class CLib {
+public class CLib implements CLibConstants {
   public static int stat(String path, Stat buf) {
     return CLibJNI.stat(path, Stat.getCPtr(buf), buf);
   }
