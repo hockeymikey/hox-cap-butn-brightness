@@ -16,6 +16,10 @@ static {
 
 // use the Java style class name Stat for "struct stat"
 %rename stat Stat;
+// expose the st_XXX values to Java omitting the "st_" prefix
+%rename st_mode mode;
+%rename st_uid uid;
+%rename st_gid gid;
 struct stat {
     unsigned int st_mode;
     unsigned long st_uid;

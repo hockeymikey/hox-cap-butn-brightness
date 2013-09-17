@@ -197,7 +197,7 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 extern "C" {
 #endif
 
-SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1mode_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1mode_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   struct stat *arg1 = (struct stat *) 0 ;
   unsigned int arg2 ;
   
@@ -210,7 +210,7 @@ SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Sta
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1mode_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1mode_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   struct stat *arg1 = (struct stat *) 0 ;
   unsigned int result;
@@ -225,7 +225,7 @@ SWIGEXPORT jlong JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_St
 }
 
 
-SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1uid_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1uid_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   struct stat *arg1 = (struct stat *) 0 ;
   unsigned long arg2 ;
   
@@ -238,7 +238,7 @@ SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Sta
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1uid_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1uid_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   struct stat *arg1 = (struct stat *) 0 ;
   unsigned long result;
@@ -253,7 +253,7 @@ SWIGEXPORT jlong JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_St
 }
 
 
-SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1gid_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1gid_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   struct stat *arg1 = (struct stat *) 0 ;
   unsigned long arg2 ;
   
@@ -266,7 +266,7 @@ SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Sta
 }
 
 
-SWIGEXPORT jlong JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1gid_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+SWIGEXPORT jlong JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1gid_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
   jlong jresult = 0 ;
   struct stat *arg1 = (struct stat *) 0 ;
   unsigned long result;

@@ -9,12 +9,12 @@
 package org.sleepydragon.capbutnbrightness.clib;
 
 public class CLibJNI {
-  public final static native void Stat_st_mode_set(long jarg1, Stat jarg1_, long jarg2);
-  public final static native long Stat_st_mode_get(long jarg1, Stat jarg1_);
-  public final static native void Stat_st_uid_set(long jarg1, Stat jarg1_, long jarg2);
-  public final static native long Stat_st_uid_get(long jarg1, Stat jarg1_);
-  public final static native void Stat_st_gid_set(long jarg1, Stat jarg1_, long jarg2);
-  public final static native long Stat_st_gid_get(long jarg1, Stat jarg1_);
+  public final static native void Stat_mode_set(long jarg1, Stat jarg1_, long jarg2);
+  public final static native long Stat_mode_get(long jarg1, Stat jarg1_);
+  public final static native void Stat_uid_set(long jarg1, Stat jarg1_, long jarg2);
+  public final static native long Stat_uid_get(long jarg1, Stat jarg1_);
+  public final static native void Stat_gid_set(long jarg1, Stat jarg1_, long jarg2);
+  public final static native long Stat_gid_get(long jarg1, Stat jarg1_);
   public final static native long new_Stat();
   public final static native void delete_Stat(long jarg1);
   public final static native int stat(String jarg1, long jarg2, Stat jarg2_);
