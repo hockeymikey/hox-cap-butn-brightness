@@ -161,7 +161,16 @@ public class LevelsActivity extends Activity implements
         }
 
         if (textField != null) {
-            final String progressAsStr = Integer.toString(progress);
+            final int maxProgress = seekBar.getMax();
+            final String progressAsStr;
+            if (progress == 0 || progress == maxProgress) {
+                progressAsStr = Integer.toString(progress);
+            } else {
+                final float progressLog = (float) (1 - (Math.log(maxProgress - progress) / Math.log(maxProgress)));
+                final int progressValue = (int) (progressLog * maxProgress);
+                progressAsStr = Integer.toString(progressValue);
+            }
+
             textField.setText(progressAsStr);
         }
     }
