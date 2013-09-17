@@ -9,11 +9,11 @@
 package org.sleepydragon.capbutnbrightness.clib;
 
 public class CLib implements CLibConstants {
-  public static int stat(String path, Stat buf) {
+  public static int stat(String path, Stat buf) throws org.sleepydragon.capbutnbrightness.clib.ClibException {
     return CLibJNI.stat(path, Stat.getCPtr(buf), buf);
   }
 
-  public static int chmod(String path, int mode) {
+  public static int chmod(String path, int mode) throws org.sleepydragon.capbutnbrightness.clib.ClibException {
     return CLibJNI.chmod(path, mode);
   }
 

@@ -19,13 +19,13 @@ package org.sleepydragon.capbutnbrightness.clib;
 /**
  * Exception thrown that has an associated errno.
  */
-public class ErrnoException extends Exception {
+public class ClibException extends Exception {
 
     private static final long serialVersionUID = -3216918708247925519L;
 
     private final int errno;
 
-    public ErrnoException(String message, int errno) {
+    public ClibException(String message, int errno) {
         super(message);
         this.errno = errno;
     }

@@ -5,6 +5,8 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <errno.h>
+
+#include "CLib_helper.h"
 %}
 
 // automatically call loadLibrary(), at least by the proxy class for stat
@@ -28,9 +30,18 @@ struct stat {
 
 // avoid renaming the "stat" function to "Stat" as well
 %rename stat stat;
-int stat(const char *path, struct stat *buf);
 
+%javaexception("org.sleepydragon.capbutnbrightness.clib.ClibException") {
+    $action
+    if (result != 0) {
+        CLib_ThrowClibException(jenv);
+    }
+}
+
+int stat(const char *path, struct stat *buf);
 int chmod(const char *path, unsigned short mode);
+
+%clearjavaexception;
 
 // provide some the useful errno values
 %constant const int EACCES;

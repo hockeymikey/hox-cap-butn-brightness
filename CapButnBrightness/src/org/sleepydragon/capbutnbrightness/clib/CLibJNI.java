@@ -17,8 +17,8 @@ public class CLibJNI {
   public final static native long Stat_gid_get(long jarg1, Stat jarg1_);
   public final static native long new_Stat();
   public final static native void delete_Stat(long jarg1);
-  public final static native int stat(String jarg1, long jarg2, Stat jarg2_);
-  public final static native int chmod(String jarg1, int jarg2);
+  public final static native int stat(String jarg1, long jarg2, Stat jarg2_) throws org.sleepydragon.capbutnbrightness.clib.ClibException;
+  public final static native int chmod(String jarg1, int jarg2) throws org.sleepydragon.capbutnbrightness.clib.ClibException;
   public final static native int EACCES_get();
   public final static native int EBADF_get();
   public final static native int EFAULT_get();

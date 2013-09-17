@@ -192,6 +192,8 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 #include <unistd.h>
 #include <errno.h>
 
+#include "CLib_helper.h"
+
 
 #ifdef __cplusplus
 extern "C" {
@@ -318,7 +320,12 @@ SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_sta
     if (!arg1) return 0;
   }
   arg2 = *(struct stat **)&jarg2; 
-  result = (int)stat((char const *)arg1,arg2);
+  {
+    result = (int)stat((char const *)arg1,arg2);
+    if (result != 0) {
+      CLib_ThrowClibException(jenv);
+    }
+  }
   jresult = (jint)result; 
   if (arg1) (*jenv)->ReleaseStringUTFChars(jenv, jarg1, (const char *)arg1);
   return jresult;
@@ -339,7 +346,12 @@ SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_chm
     if (!arg1) return 0;
   }
   arg2 = (unsigned short)jarg2; 
-  result = (int)chmod((char const *)arg1,arg2);
+  {
+    result = (int)chmod((char const *)arg1,arg2);
+    if (result != 0) {
+      CLib_ThrowClibException(jenv);
+    }
+  }
   jresult = (jint)result; 
   if (arg1) (*jenv)->ReleaseStringUTFChars(jenv, jarg1, (const char *)arg1);
   return jresult;

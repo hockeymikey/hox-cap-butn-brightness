@@ -16,9 +16,13 @@
  */
 package org.sleepydragon.capbutnbrightness;
 
+import org.sleepydragon.capbutnbrightness.clib.CLib;
+import org.sleepydragon.capbutnbrightness.clib.Stat;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class LevelsActivity extends Activity implements View.OnClickListener {
 
@@ -29,6 +33,28 @@ public class LevelsActivity extends Activity implements View.OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_levels);
+
+        TextView tv1 = (TextView) this.findViewById(R.id.textView1);
+        TextView tv2 = (TextView) this.findViewById(R.id.textView2);
+
+        Stat stat1 = new Stat();
+        try {
+            CLib.stat("/sys/class/leds/button-backlight/currents", stat1);
+            tv1.setText("uid=" + stat1.getUid() + " gid=" + stat1.getGid()
+                + " mode=" + stat1.getMode());
+        } catch (Exception e) {
+            tv1.setText(e.toString());
+        }
+
+        Stat stat2 = new Stat();
+        try {
+            CLib.stat("/sys/class/leds/button-backlight/zzyzx", stat2);
+            tv2.setText("uid=" + stat2.getUid() + " gid=" + stat2.getGid()
+                + " mode=" + stat2.getMode());
+        } catch (Exception e) {
+            tv2.setText(e.toString());
+        }
+
     }
 
 }
