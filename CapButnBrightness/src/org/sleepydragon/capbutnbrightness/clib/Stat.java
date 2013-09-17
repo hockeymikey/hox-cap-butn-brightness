@@ -39,19 +39,27 @@ static {
     System.loadLibrary("CLib");
 }
 
-  public void setSt_uid(int value) {
+  public void setSt_mode(long value) {
+    CLibJNI.Stat_st_mode_set(swigCPtr, this, value);
+  }
+
+  public long getSt_mode() {
+    return CLibJNI.Stat_st_mode_get(swigCPtr, this);
+  }
+
+  public void setSt_uid(long value) {
     CLibJNI.Stat_st_uid_set(swigCPtr, this, value);
   }
 
-  public int getSt_uid() {
+  public long getSt_uid() {
     return CLibJNI.Stat_st_uid_get(swigCPtr, this);
   }
 
-  public void setSt_gid(int value) {
+  public void setSt_gid(long value) {
     CLibJNI.Stat_st_gid_set(swigCPtr, this, value);
   }
 
-  public int getSt_gid() {
+  public long getSt_gid() {
     return CLibJNI.Stat_st_gid_get(swigCPtr, this);
   }
 

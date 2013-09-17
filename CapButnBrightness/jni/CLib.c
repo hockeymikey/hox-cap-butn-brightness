@@ -197,58 +197,86 @@ static void SWIGUNUSED SWIG_JavaThrowException(JNIEnv *jenv, SWIG_JavaExceptionC
 extern "C" {
 #endif
 
-SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1uid_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1mode_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   struct stat *arg1 = (struct stat *) 0 ;
-  int arg2 ;
+  unsigned int arg2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(struct stat **)&jarg1; 
-  arg2 = (int)jarg2; 
-  if (arg1) (arg1)->st_uid = arg2;
+  arg2 = (unsigned int)jarg2; 
+  if (arg1) (arg1)->st_mode = arg2;
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1uid_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jint jresult = 0 ;
+SWIGEXPORT jlong JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1mode_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
   struct stat *arg1 = (struct stat *) 0 ;
-  int result;
+  unsigned int result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(struct stat **)&jarg1; 
-  result = (int) ((arg1)->st_uid);
-  jresult = (jint)result; 
+  result = (unsigned int) ((arg1)->st_mode);
+  jresult = (jlong)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1gid_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jint jarg2) {
+SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1uid_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
   struct stat *arg1 = (struct stat *) 0 ;
-  int arg2 ;
+  unsigned long arg2 ;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(struct stat **)&jarg1; 
-  arg2 = (int)jarg2; 
+  arg2 = (unsigned long)jarg2; 
+  if (arg1) (arg1)->st_uid = arg2;
+}
+
+
+SWIGEXPORT jlong JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1uid_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
+  struct stat *arg1 = (struct stat *) 0 ;
+  unsigned long result;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(struct stat **)&jarg1; 
+  result = (unsigned long) ((arg1)->st_uid);
+  jresult = (jlong)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1gid_1set(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_, jlong jarg2) {
+  struct stat *arg1 = (struct stat *) 0 ;
+  unsigned long arg2 ;
+  
+  (void)jenv;
+  (void)jcls;
+  (void)jarg1_;
+  arg1 = *(struct stat **)&jarg1; 
+  arg2 = (unsigned long)jarg2; 
   if (arg1) (arg1)->st_gid = arg2;
 }
 
 
-SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1gid_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
-  jint jresult = 0 ;
+SWIGEXPORT jlong JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_Stat_1st_1gid_1get(JNIEnv *jenv, jclass jcls, jlong jarg1, jobject jarg1_) {
+  jlong jresult = 0 ;
   struct stat *arg1 = (struct stat *) 0 ;
-  int result;
+  unsigned long result;
   
   (void)jenv;
   (void)jcls;
   (void)jarg1_;
   arg1 = *(struct stat **)&jarg1; 
-  result = (int) ((arg1)->st_gid);
-  jresult = (jint)result; 
+  result = (unsigned long) ((arg1)->st_gid);
+  jresult = (jlong)result; 
   return jresult;
 }
 
@@ -300,7 +328,7 @@ SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_sta
 SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_chmod(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2) {
   jint jresult = 0 ;
   char *arg1 = (char *) 0 ;
-  mode_t arg2 ;
+  unsigned short arg2 ;
   int result;
   
   (void)jenv;
@@ -310,7 +338,7 @@ SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_chm
     arg1 = (char *)(*jenv)->GetStringUTFChars(jenv, jarg1, 0);
     if (!arg1) return 0;
   }
-  arg2 = (mode_t)jarg2; 
+  arg2 = (unsigned short)jarg2; 
   result = (int)chmod((char const *)arg1,arg2);
   jresult = (jint)result; 
   if (arg1) (*jenv)->ReleaseStringUTFChars(jenv, jarg1, (const char *)arg1);

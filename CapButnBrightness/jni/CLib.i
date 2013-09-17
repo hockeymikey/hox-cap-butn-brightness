@@ -17,16 +17,16 @@ static {
 // use the Java style class name Stat for "struct stat"
 %rename stat Stat;
 struct stat {
-    int st_uid;
-    int st_gid;
+    unsigned int st_mode;
+    unsigned long st_uid;
+    unsigned long st_gid;
 };
 
 // avoid renaming the "stat" function to "Stat" as well
 %rename stat stat;
 int stat(const char *path, struct stat *buf);
 
-typedef unsigned short mode_t;
-int chmod(const char *path, mode_t mode);
+int chmod(const char *path, unsigned short mode);
 
 // provide some the useful errno values
 %constant const int EACCES;
@@ -40,6 +40,8 @@ int chmod(const char *path, mode_t mode);
 %constant const int EOVERFLOW;
 %constant const int EPERM;
 %constant const int EROFS;
+
+// mode values for chmod
 %constant const int S_IRUSR;
 %constant const int S_IWUSR;
 %constant const int S_IXUSR;
