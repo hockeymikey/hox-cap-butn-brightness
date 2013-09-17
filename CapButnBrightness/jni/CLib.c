@@ -297,6 +297,27 @@ SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_sta
 }
 
 
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_chmod(JNIEnv *jenv, jclass jcls, jstring jarg1, jint jarg2) {
+  jint jresult = 0 ;
+  char *arg1 = (char *) 0 ;
+  mode_t arg2 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  arg1 = 0;
+  if (jarg1) {
+    arg1 = (char *)(*jenv)->GetStringUTFChars(jenv, jarg1, 0);
+    if (!arg1) return 0;
+  }
+  arg2 = (mode_t)jarg2; 
+  result = (int)chmod((char const *)arg1,arg2);
+  jresult = (jint)result; 
+  if (arg1) (*jenv)->ReleaseStringUTFChars(jenv, jarg1, (const char *)arg1);
+  return jresult;
+}
+
+
 SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_EACCES_1get(JNIEnv *jenv, jclass jcls) {
   jint jresult = 0 ;
   int result;
@@ -400,6 +421,210 @@ SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_EOV
   (void)jenv;
   (void)jcls;
   result = (int)(EOVERFLOW);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_EPERM_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(EPERM);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_EROFS_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(EROFS);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1IRUSR_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_IRUSR);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1IWUSR_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_IWUSR);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1IXUSR_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_IXUSR);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1IRWXU_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_IRWXU);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1IRGRP_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_IRGRP);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1IWGRP_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_IWGRP);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1IXGRP_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_IXGRP);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1IRWXG_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_IRWXG);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1IROTH_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_IROTH);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1IWOTH_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_IWOTH);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1IXOTH_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_IXOTH);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1IRWXO_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_IRWXO);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1ISUID_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_ISUID);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1ISGID_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_ISGID);
+  jresult = (jint)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT jint JNICALL Java_org_sleepydragon_capbutnbrightness_clib_CLibJNI_S_1ISVTX_1get(JNIEnv *jenv, jclass jcls) {
+  jint jresult = 0 ;
+  int result;
+  
+  (void)jenv;
+  (void)jcls;
+  result = (int)(S_ISVTX);
   jresult = (jint)result; 
   return jresult;
 }

@@ -13,4 +13,8 @@ public class CLib implements CLibConstants {
     return CLibJNI.stat(path, Stat.getCPtr(buf), buf);
   }
 
+  public static int chmod(String path, int mode) {
+    return CLibJNI.chmod(path, mode);
+  }
+
 }

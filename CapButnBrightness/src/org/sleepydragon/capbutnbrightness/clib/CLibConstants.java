@@ -18,4 +18,21 @@ public interface CLibConstants {
   public final static int ENOMEM = CLibJNI.ENOMEM_get();
   public final static int ENOTDIR = CLibJNI.ENOTDIR_get();
   public final static int EOVERFLOW = CLibJNI.EOVERFLOW_get();
+  public final static int EPERM = CLibJNI.EPERM_get();
+  public final static int EROFS = CLibJNI.EROFS_get();
+  public final static int S_IRUSR = CLibJNI.S_IRUSR_get();
+  public final static int S_IWUSR = CLibJNI.S_IWUSR_get();
+  public final static int S_IXUSR = CLibJNI.S_IXUSR_get();
+  public final static int S_IRWXU = CLibJNI.S_IRWXU_get();
+  public final static int S_IRGRP = CLibJNI.S_IRGRP_get();
+  public final static int S_IWGRP = CLibJNI.S_IWGRP_get();
+  public final static int S_IXGRP = CLibJNI.S_IXGRP_get();
+  public final static int S_IRWXG = CLibJNI.S_IRWXG_get();
+  public final static int S_IROTH = CLibJNI.S_IROTH_get();
+  public final static int S_IWOTH = CLibJNI.S_IWOTH_get();
+  public final static int S_IXOTH = CLibJNI.S_IXOTH_get();
+  public final static int S_IRWXO = CLibJNI.S_IRWXO_get();
+  public final static int S_ISUID = CLibJNI.S_ISUID_get();
+  public final static int S_ISGID = CLibJNI.S_ISGID_get();
+  public final static int S_ISVTX = CLibJNI.S_ISVTX_get();
 }
