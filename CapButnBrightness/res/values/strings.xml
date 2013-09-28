@@ -9,6 +9,7 @@
     <string name="btn_dim">Dim</string>
     <string name="btn_bright">Bright</string>
     <string name="btn_apply">Apply</string>
+    <string name="btn_upgrade">Upgrade</string>
     <string name="pref_boot_title">Set On Boot</string>
     <string name="pref_boot_summary">Set the brightness of the capacitive
         buttons when the device boots</string>
@@ -21,5 +22,7 @@
     <string name="pref_levels_title">Brightness Levels</string>
     <string name="pref_levels_summary">Edit the brightness levels that are
         used when the capacitive buttons brightness is set</string>
+    <string name="txt_upgrade_title">Upgrade to Pro version</string>
+    <string name="txt_upgrade_description">to get new features immediately</string>
 
 </resources>
