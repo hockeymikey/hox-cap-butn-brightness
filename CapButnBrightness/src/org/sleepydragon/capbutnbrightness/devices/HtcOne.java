@@ -17,9 +17,12 @@
 package org.sleepydragon.capbutnbrightness.devices;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import org.sleepydragon.capbutnbrightness.Constants;
 import org.sleepydragon.capbutnbrightness.IntFileRootHelper;
+import org.sleepydragon.capbutnbrightness.IntFileRootHelper.IntParseException;
 import org.sleepydragon.capbutnbrightness.debug.DebugFilesProvider;
 
 import android.util.Log;
@@ -66,7 +69,23 @@ public class HtcOne implements CapacitiveButtonsBacklightBrightness,
             throw new IllegalArgumentException("invalid level: " + level);
         }
 
-        IntFileRootHelper intFile = new IntFileRootHelper(notifier);
+        final IntFileRootHelper intFile = new IntFileRootHelper(notifier);
+
+        // write the same value back to the brightness file just to have its
+        // permissions changed and locked down, preventing the OS from mucking
+        // with it
+        final int brightness;
+        try {
+            brightness = intFile.read(BRIGHTNESS_PATH);
+        } catch (FileNotFoundException e) {
+            throw new IntFileRootHelper.IntWriteException(e.toString());
+        } catch (IOException e) {
+            throw new IntFileRootHelper.IntWriteException(e.toString());
+        } catch (IntParseException e) {
+            throw new IntFileRootHelper.IntWriteException(e.toString());
+        }
+        intFile.write(BRIGHTNESS_PATH, brightness);
+
         try {
             final boolean backlightOn = (level != 0);
             if (!backlightOn) {
