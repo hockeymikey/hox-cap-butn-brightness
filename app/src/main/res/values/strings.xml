@@ -1,3 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Capacitive Buttons</string>
+    <string name="btn_default">Default</string>
+    <string name="btn_off">Off</string>
+    <string name="btn_dim">Dim</string>
+    <string name="btn_bright">Bright</string>
+    <string name="btn_upgrade">Upgrade</string>
+    <string name="txt_upgrade_title">Upgrade to Pro version</string>
+    <string name="txt_upgrade_description">to get new features immediately</string>
+    <string name="title_activity_set_brightness">Set Capacitive Buttons Brightness</string>
+    <string name="action_settings">Settings</string>
+
 </resources>
